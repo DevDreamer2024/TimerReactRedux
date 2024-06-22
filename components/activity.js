@@ -24,7 +24,7 @@ const handleStart = () => {
 const handlePause = () => {
   dispatch(pauseTimer(props.id));
 }
-const timer = new Date(activity.timer * 1000).toISOString().slice(11, 19);
+const timer = activity ? new Date(activity.timer * 1000).toISOString().slice(11, 19) : '';
   return (
     <>
       <div className={styles.activityWindow}>

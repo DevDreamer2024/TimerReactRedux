@@ -13,15 +13,15 @@ const initialState = {
     timerInterval : {},
 }
 
-export const timeManagement = createSlice({
+export const timeManagementSlice = createSlice({
     name : 'timeManagement',
     initialState,
-    reducer : {
+    reducers : {
         addActivity : (state, action) => {
             state.activity.push({
                 id : state.activity.length,
                 name : action.payload,
-                time : 0,
+                timer : 0,
                 isAlive : true,
                 isRunning : false,
             });
@@ -57,5 +57,5 @@ export const timeManagement = createSlice({
         },
       });
   
-      export const { addActivity, removeActivity, startTimer, pauseTimer, incrementTimer } = timeManagement.actions;
-        export default timeManagement.reducer;
+      export const { addActivity, removeActivity, startTimer, pauseTimer, incrementTimer } = timeManagementSlice.actions;
+        export default timeManagementSlice.reducer;

@@ -1,4 +1,5 @@
 import Activity from './Activity';
+import ParticlesComponent from './ParticlesBackground';
 import styles from '../styles/Home.module.css';
 import { useState } from 'react';
 import { useDispatch , useSelector } from 'react-redux';
@@ -26,6 +27,8 @@ function Home() {
   });
 
   return (
+    <>
+    <ParticlesComponent />
     <div className={styles.container}>
       <div className={styles.topSection}>
         <div className={styles.trackerWindow}>
@@ -47,6 +50,7 @@ function Home() {
         {activitiesComponents}
       </div>
     </div>
+    </>
   );
 }
 export default Home;
